@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shubhanan Sharma | Portfolio</title>
-    <link rel="icon" type="image/png" href="{%static 'images/ss1.png'%}" />
+    <title>Eminence Adebayo | Portfolio</title>
+    <!-- <link rel="icon" type="image/png" href="{%static 'images/your_favicon.png'%}" /> -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -17,7 +17,7 @@
     <nav>
       <div class="nav-container">
         <a href="#home" class="logo">
-          <span class="name">Shubhanan's</span>
+          <span class="name">Eminence's</span>
           <span class="portfolio">Portfolio</span>
         </a>
         <ul class="nav-links">
@@ -34,12 +34,12 @@
     <section id="home" class="hero">
       <div class="hero-content">
         <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-title">Shubhanan Sharma</h1>
+        <h1 class="hero-title">Eminence Adebayo</h1>
         <p class="hero-subtitle">Full Stack Developer</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary"> Contact Me → </a>
           <a
-            href="{% static 'pdf/resume.pdf' %}"
+            href="{% static 'pdf/my_resume.pdf' %}"
             class="btn btn-secondary"
             target="_blank"
           >
@@ -57,21 +57,17 @@
         <div class="about-image">
           <div class="about-image-container">
             <img
-              src="{% static 'images/shubhanan.jpg' %}"
-              alt="Shubhanan Sharma"
+              src="{% static 'images/Eminence.jpg' %}"
+              alt="Eminence Adebayo"
             />
           </div>
         </div>
         <div class="about-text">
           <p>
-            I'm a 3rd year B.Tech CSE student specializing in AI/ML from UPES.
-            I'm a developer who loves turning ideas into real, usable products.
-            What started as curiosity grew into a passion for building tools I'd
-            actually use—whether simple or ambitious.
+            I’m a full-stack developer who loves solving real problems with code. Using tools like Django, Python, and JavaScript, I build efficient, modern web applications with clean design and solid performance.
           </p>
           <p>
-            I enjoy working with modern technologies and creating solutions that
-            make a difference.
+            I focus on delivering real-world solutions that are reliable, easy to use, and built to scale.
           </p>
         </div>
       </div>
@@ -81,14 +77,30 @@
     <section id="skills" class="section">
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
-        <!-- Frontend Technologies -->
+        <!-- Existing skills -->
         <div class="skill-item">
           <i
-            class="fab fa-js-square"
+            class="fab fa-python"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">JavaScript</div>
+          <div class="skill-name">Python</div>
           <div class="skill-level">Advanced</div>
+        </div>
+        <div class="skill-item">
+          <i
+            class="fab fa-python"
+            style="font-size: 2.5rem; color: var(--primary)"
+          ></i>
+          <div class="skill-name">Django</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-item">
+          <i
+            class="fas fa-code"
+            style="font-size: 2.5rem; color: var(--primary)"
+          ></i>
+          <div class="skill-name">HTMX</div>
+          <div class="skill-level">Intermediate</div>
         </div>
         <div class="skill-item">
           <i
@@ -104,108 +116,6 @@
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
           <div class="skill-name">CSS</div>
-          <div class="skill-level">Advanced</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fab fa-react"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">React</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fab fa-react"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Next.js</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fas fa-wind"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Tailwind</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-
-        <!-- Backend Technologies -->
-        <div class="skill-item">
-          <i
-            class="fab fa-node-js"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Node.js</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fas fa-server"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Express.js</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fab fa-python"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Django</div>
-          <div class="skill-level">Beginner</div>
-        </div>
-
-        <!-- Programming Languages -->
-        <div class="skill-item">
-          <i
-            class="fab fa-python"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Python</div>
-          <div class="skill-level">Advanced</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fas fa-code"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">C++</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fab fa-java"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Java</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-
-        <!-- Data Science & ML -->
-        <div class="skill-item">
-          <i
-            class="fas fa-chart-bar"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">NumPy</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fas fa-table"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">Pandas</div>
-          <div class="skill-level">Intermediate</div>
-        </div>
-        <div class="skill-item">
-          <i
-            class="fas fa-calculator"
-            style="font-size: 2.5rem; color: var(--primary)"
-          ></i>
-          <div class="skill-name">SciPy</div>
           <div class="skill-level">Intermediate</div>
         </div>
         <div class="skill-item">
@@ -213,25 +123,23 @@
             class="fas fa-brain"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">TensorFlow</div>
-          <div class="skill-level">Intermediate</div>
+          <div class="skill-name">AI/ML</div>
+          <div class="skill-level">Beginner</div>
         </div>
         <div class="skill-item">
           <i
-            class="fas fa-eye"
+            class="fab fa-java"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">OpenCV</div>
-          <div class="skill-level">Intermediate</div>
+          <div class="skill-name">Java</div>
+          <div class="skill-level">Beginner</div>
         </div>
-
-        <!-- Databases -->
         <div class="skill-item">
           <i
-            class="fas fa-database"
+            class="fas fa-code"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">PostgreSQL</div>
+          <div class="skill-name">C/C++</div>
           <div class="skill-level">Beginner</div>
         </div>
         <div class="skill-item">
@@ -239,23 +147,41 @@
             class="fas fa-database"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">MySQL</div>
+          <div class="skill-name">SQL</div>
           <div class="skill-level">Intermediate</div>
         </div>
         <div class="skill-item">
           <i
-            class="fas fa-leaf"
+            class="fas fa-database"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">MongoDB</div>
+          <div class="skill-name">Sqlite</div>
           <div class="skill-level">Intermediate</div>
         </div>
         <div class="skill-item">
           <i
-            class="fas fa-server"
+            class="fab fa-git-alt"
             style="font-size: 2.5rem; color: var(--primary)"
           ></i>
-          <div class="skill-name">Supabase</div>
+          <div class="skill-name">Git</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-item">
+          <i
+            class="fab fa-js-square"
+            style="font-size: 2.5rem; color: var(--primary)"
+          ></i>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Beginner</div>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-server" style="font-size: 2.5rem; color: var(--primary)"></i>
+          <div class="skill-name">VPS</div>
+          <div class="skill-level">Intermediate</div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-docker" style="font-size: 2.5rem; color: var(--primary)"></i>
+          <div class="skill-name">Docker</div>
           <div class="skill-level">Intermediate</div>
         </div>
       </div>
@@ -264,122 +190,60 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-        <!-- Snap-n-Solve -->
+      <div class="project-grid">
+        <!-- Project 1: TaskHub -->
         <div class="project-card">
-          <div class="project-image">
-            <img
-              src="{% static 'images/snap-n-solve.jpeg'%}"
-              alt="Snap-n-Solve Project"
-            />
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Snap-n-Solve</h3>
+          <img
+            src="{% static 'images/taskhub.png' %}"
+            alt="TaskHub"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">TaskHub</h3>
             <p class="project-description">
-              A real-time Sudoku puzzle solver that uses computer vision and
-              machine learning to detect, solve, and overlay solutions on Sudoku
-              puzzles captured through your webcam
+              TaskHub is a clean, responsive task management app built with a modern design. It allows users to add, prioritize, and complete tasks in a simple and intuitive interface. The app supports user authentication, dynamic form handling, and CRUD operations — all powered by Django’s robust backend.
             </p>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">OpenCV</span>
-              <span class="project-tag">TensorFlow</span>
-              <span class="project-tag">NumPy</span>
-              <span class="project-tag">Keras</span>
-            </div>
+            <p class="project-tech">**Technologies:** Django, HTML5, CSS3, Bootstrap</p>
             <div class="project-links">
-              <a href="#" class="project-link demo"> • Demo </a>
               <a
-                href="https://github.com/shubhs27/Snap-n-Solve"
-                class="project-link github"
+                href="http://Eminenz07.pythonanywhere.com"
                 target="_blank"
+                class="btn btn-secondary"
+                >Live Demo</a
               >
-                <i class="fab fa-github"></i>
-                Code
-              </a>
+              <a
+                href="https://github.com/Eminenz07/TaskHub"
+                target="_blank"
+                class="btn btn-secondary"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
 
-        <!-- The Wild Oasis -->
+        <!-- Project 2: Blog API (Placeholder) -->
         <div class="project-card">
-          <div class="project-image">
-            <img
-              src="{% static 'images/wildOasis.png'%}"
-              alt="The Wild Oasis Project"
-            />
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">The Wild Oasis</h3>
+          <img
+            src="{% static 'images/blog.png' %}"
+            alt="Blog API"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">Django Blog API</h3>
             <p class="project-description">
-              An internal hotel management application designed for hotel
-              employees to efficiently manage bookings, cabins, guests, and more
+              A robust and scalable blog API built with Django, designed to provide a backend for content management. It features user authentication, post creation, editing, and deletion, and a flexible architecture for future expansion.
             </p>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Styled-Components</span>
-              <span class="project-tag">React-Query</span>
-              <span class="project-tag">React-Hook-Form</span>
-              <span class="project-tag">Recharts</span>
-              <span class="project-tag">Supabase</span>
-            </div>
+            <p class="project-tech">**Technologies:** Django, HTML, HTMX, CSS</p>
             <div class="project-links">
-              <a
-                href="https://the-wild-oasis-shubhanan.vercel.app/"
-                class="project-link demo"
-                target="_blank"
-              >
-                • Demo
-              </a>
-              <a
-                href="https://github.com/shubhs27/The-wild-oasis"
-                class="project-link github"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i>
-                Code
-              </a>
+              <!-- Add live demo link when available -->
+              <!-- <a href="#" target="_blank" class="btn btn-secondary">Live Demo</a> -->
+              <!-- Add GitHub link when available -->
+              <!-- <a href="#" target="_blank" class="btn btn-secondary">GitHub</a> -->
             </div>
           </div>
         </div>
 
-        <!-- PomodoLock -->
-        <div class="project-card">
-          <div class="project-image">
-            <img
-              src="{% static 'images/pomodoLock.png'%}"
-              alt="PomodoLock Project"
-            />
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">PomodoLock</h3>
-            <p class="project-description">
-              A powerful Chrome extension that combines the Pomodoro technique
-              with website blocking functionality to boost your productivity
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">Chrome Extension</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://chrome.google.com/webstore/detail/mapddbpaaaachoidpbolhpckhillhbpj"
-                class="project-link demo"
-                target="_blank"
-              >
-                • Demo
-              </a>
-              <a
-                href="https://github.com/shubhs27/PomodoLock"
-                class="project-link github"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- You can add more project cards here following the same structure -->
       </div>
     </section>
 
@@ -387,31 +251,37 @@
     <section id="contact" class="section">
       <h2 class="section-title">Contact Me</h2>
       <div class="contact-content">
-        <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9">
-          Let's connect!
-        </p>
+        <p>Have a question or want to work together? Feel free to reach out!</p>
+        <div class="contact-details">
+          <p>
+            <i class="fas fa-envelope"></i> Email: emmyadeoluwa@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-phone"></i> Phone: +2349073601282
+          </p>
+          <p>
+            <i class="fab fa-twitter"></i> Twitter: <a href="https://x.com/Emidveloper?t=GTIOwYPANZFheoMNGA9-Dw&s=09" target="_blank">@Emidveloper</a>
+          </p>
+          <p>
+            <i class="fab fa-github"></i> GitHub: <a href="https://github.com/Eminenz07" target="_blank">Eminenz07</a>
+          </p>
+        </div>
         <form class="contact-form" method="post">
           {% csrf_token %}
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" id="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-          </button>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="content"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
     </section>
@@ -419,37 +289,15 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
+        <p>&copy; 2024 Eminence Adebayo. All rights reserved.</p>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/shubhs27/" target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://github.com/shubhs27" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="mailto:shubhanans@gmail.com"
-            ><i class="fas fa-envelope"></i
-          ></a>
+          <a href="https://x.com/Emidveloper?t=GTIOwYPANZFheoMNGA9-Dw&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/Eminenz07" target="_blank"><i class="fab fa-github"></i></a>
+          <!-- Add other social media links as needed -->
         </div>
-        <p class="footer-text">
-          &copy; 2025 Shubhanan Sharma. All rights reserved.
-        </p>
       </div>
     </footer>
 
-    <script>
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
-          }
-        });
-      });
-    </script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

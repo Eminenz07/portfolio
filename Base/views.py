@@ -35,7 +35,7 @@ def contact(request):
             messages.error(request, "invalid email try again")
             return render(request, "home.html")
 
-        if len(phone) > 9 and len(phone) < 13:
+        if phone and len(phone) > 9 and len(phone) < 13:
             pass
         else:
             messages.error(request, "invalid phone please try again")
