@@ -7,7 +7,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "https://portfolio-ma77.onrender.com", # <--- ADD THIS LINE, replace with your actual Render URL
+    "portfolio-ma77.onrender.com", # <--- ADD THIS LINE, replace with your actual Render URL
 ]
 
 # Security
@@ -44,3 +44,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
