@@ -1,4 +1,4 @@
-# 🚀 Shubhanan's Portfolio
+# 🚀 Eminence's Portfolio
 
 A modern, responsive portfolio website built with Django, showcasing my journey as a Full Stack Developer and AI/ML enthusiast.
 
@@ -56,7 +56,7 @@ A modern, responsive portfolio website built with Django, showcasing my journey 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/shubhs27/Portfolio-Django.git
+   git clone https://github.com/Eminenz07/portfolio.git
    cd portfolio
    ```
 
@@ -166,4 +166,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ by Shubhanan Sharma
+Built with ❤️ by Eminence Adebayo
