@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = ">=21.2.0"
+whitenoise = ">=6.6.0"
+django = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
