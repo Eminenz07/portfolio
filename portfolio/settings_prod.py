@@ -5,9 +5,9 @@ import os
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "shubhanan-sharma.up.railway.app",
     "localhost",
     "127.0.0.1",
+    "your-render-app-name.onrender.com", # <--- ADD THIS LINE, replace with your actual Render URL
 ]
 
 # Security
