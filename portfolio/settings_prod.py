@@ -2,7 +2,7 @@ from .settings import *
 import os
 
 # Production settings
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
