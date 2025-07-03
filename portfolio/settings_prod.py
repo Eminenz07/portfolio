@@ -11,9 +11,7 @@ ALLOWED_HOSTS = [
 ]
 
 # Security
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY", "django-insecure-r*vbx$28&d%g#*#t($%yc!4h)om=lx#q9e_z!tqgcayq3hzo+l"
-)
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # Static files configuration for production
 STATIC_URL = "/static/"
