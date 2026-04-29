@@ -424,18 +424,8 @@ nav {
   margin-top: 2rem;
 }
 
-.form-group {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: 500;
-  color: var(--foreground);
-}
-
-.form-group input,
-.form-group textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -443,15 +433,16 @@ nav {
   color: var(--foreground);
   font-family: inherit;
   transition: border-color 0.3s ease;
+  width: 100%;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: var(--primary);
 }
 
-.form-group textarea {
+.contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
