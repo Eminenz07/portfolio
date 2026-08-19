@@ -1,0 +1,33 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}{{ title }} | Admin Dashboard{% endblock %}
+{% block subpath %}skills / form{% endblock %}
+
+{% block content %}
+<div class="dash-card" style="max-width:560px">
+  <h2 class="dash-card-title">{{ title }}</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="field-group">
+      <label class="field-label">Category Cluster</label>
+      {{ form.cluster }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Skill Name</label>
+      {{ form.name }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Proficiency Level</label>
+      {{ form.level }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Display Order</label>
+      {{ form.order }}
+    </div>
+    <div style="display:flex;gap:12px;margin-top:24px">
+      <button type="submit" class="btn btn-primary">Save Skill →</button>
+      <a href="{% url 'dashboard_skills' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

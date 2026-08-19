@@ -1,0 +1,57 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}{{ title }} | Admin Dashboard{% endblock %}
+{% block subpath %}projects / form{% endblock %}
+
+{% block content %}
+<div class="dash-card" style="max-width:720px">
+  <h2 class="dash-card-title">{{ title }}</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="field-group">
+      <label class="field-label">Project Title</label>
+      {{ form.title }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Category / Meta Label</label>
+      {{ form.meta_category }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Description</label>
+      {{ form.description }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Tech Tags (comma separated)</label>
+      {{ form.tech_tags }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Browser Bar Display URL</label>
+      {{ form.browser_url }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Static Image Filename (e.g. images/SubDoc (1).png)</label>
+      {{ form.image_static_path }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Or Upload Image File</label>
+      {{ form.image }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Live Demo URL</label>
+      {{ form.live_demo_url }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">GitHub URL</label>
+      {{ form.github_url }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Display Order (lower numbers appear first)</label>
+      {{ form.order }}
+    </div>
+    <div style="display:flex;gap:12px;margin-top:24px">
+      <button type="submit" class="btn btn-primary">Save Project →</button>
+      <a href="{% url 'dashboard_projects' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

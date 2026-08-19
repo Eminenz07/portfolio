@@ -1,0 +1,42 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}Skills | Admin Dashboard{% endblock %}
+{% block subpath %}skills{% endblock %}
+
+{% block top_actions %}
+<a href="{% url 'skill_create' %}" class="btn btn-primary btn-sm">+ Add Skill</a>
+{% endblock %}
+
+{% block content %}
+<div class="dash-card">
+  <table class="dash-table">
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>Cluster</th>
+        <th>Skill Name</th>
+        <th>Proficiency Level</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for skill in skills %}
+      <tr>
+        <td><span class="badge">{{ skill.order }}</span></td>
+        <td><strong>{{ skill.cluster }}</strong></td>
+        <td>{{ skill.name }}</td>
+        <td><span class="badge badge-success">{{ skill.level }}</span></td>
+        <td>
+          <a href="{% url 'skill_edit' skill.pk %}" class="btn btn-secondary btn-sm" style="margin-right:6px">Edit</a>
+          <a href="{% url 'skill_delete' skill.pk %}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5" style="text-align:center;color:var(--meta);padding:24px">No skills added yet. Click "+ Add Skill" to create one.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

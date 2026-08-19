@@ -1,0 +1,20 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}Confirm Delete | Admin Dashboard{% endblock %}
+{% block subpath %}confirm delete{% endblock %}
+
+{% block content %}
+<div class="dash-card" style="max-width:500px">
+  <h2 class="dash-card-title" style="color:var(--danger)">Confirm Delete</h2>
+  <p style="color:var(--fg-2);margin-bottom:24px">
+    Are you sure you want to delete the {{ type }} <strong>"{{ object }}"</strong>? This action cannot be undone.
+  </p>
+  <form method="post">
+    {% csrf_token %}
+    <div style="display:flex;gap:12px">
+      <button type="submit" class="btn btn-danger">Yes, Delete</button>
+      <a href="javascript:history.back()" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}Projects | Admin Dashboard{% endblock %}
+{% block subpath %}projects{% endblock %}
+
+{% block top_actions %}
+<a href="{% url 'project_create' %}" class="btn btn-primary btn-sm">+ Add Project</a>
+{% endblock %}
+
+{% block content %}
+<div class="dash-card">
+  <table class="dash-table">
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Tech Stack</th>
+        <th>Links</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for project in projects %}
+      <tr>
+        <td><span class="badge">{{ project.order }}</span></td>
+        <td><strong>{{ project.title }}</strong></td>
+        <td>{{ project.meta_category }}</td>
+        <td>
+          {% for tag in project.tags_list %}
+          <span class="badge" style="font-size:10px">{{ tag }}</span>
+          {% endfor %}
+        </td>
+        <td>
+          {% if project.live_demo_url %}<a href="{{ project.live_demo_url }}" target="_blank" style="color:var(--accent);margin-right:8px">Demo ↗</a>{% endif %}
+          {% if project.github_url %}<a href="{{ project.github_url }}" target="_blank" style="color:var(--meta)">Code ↗</a>{% endif %}
+        </td>
+        <td>
+          <a href="{% url 'project_edit' project.pk %}" class="btn btn-secondary btn-sm" style="margin-right:6px">Edit</a>
+          <a href="{% url 'project_delete' project.pk %}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6" style="text-align:center;color:var(--meta);padding:24px">No projects added yet. Click "+ Add Project" to create one.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

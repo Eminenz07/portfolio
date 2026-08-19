@@ -1,0 +1,60 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}Site Profile Settings | Admin Dashboard{% endblock %}
+{% block subpath %}profile settings{% endblock %}
+
+{% block content %}
+<div class="dash-card" style="max-width:720px">
+  <h2 class="dash-card-title">Site Profile Settings</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="field-group">
+      <label class="field-label">Title / Role</label>
+      {{ form.title_role }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Hero Subtitle Role Text</label>
+      {{ form.hero_role_text }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Live Status Message (Status Prompt)</label>
+      {{ form.status_message }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Availability Status</label>
+      {{ form.availability }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Location / Timezone Note</label>
+      {{ form.location }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">About Paragraph 1</label>
+      {{ form.bio_p1 }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">About Paragraph 2</label>
+      {{ form.bio_p2 }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Contact Email</label>
+      {{ form.email }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Phone Number</label>
+      {{ form.phone }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">Twitter / X URL</label>
+      {{ form.twitter_url }}
+    </div>
+    <div class="field-group">
+      <label class="field-label">GitHub URL</label>
+      {{ form.github_url }}
+    </div>
+    <div style="display:flex;gap:12px;margin-top:24px">
+      <button type="submit" class="btn btn-primary">Save Profile Settings →</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

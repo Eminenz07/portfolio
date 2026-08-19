@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Eminence Adebayo | Full Stack Developer</title>
+<title>Eminence Adebayo | {{ site_profile.title_role|default:"Full Stack Developer" }}</title>
 <meta name="description" content="Eminence Adebayo is a full-stack developer building reliable, modern web applications with Django, Python and HTMX."/>
-<meta property="og:title" content="Eminence Adebayo | Full Stack Developer"/>
+<meta property="og:title" content="Eminence Adebayo | {{ site_profile.title_role|default:"Full Stack Developer" }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="{% static 'images/IMG-20260806-WA0072.jpg' %}"/>
 <link rel="icon" href="{% static 'images/favicon.ico' %}"/>
@@ -443,16 +443,16 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
     <div class="container hero-inner">
       <p class="eyebrow hero-eyebrow" data-reveal><span class="idx">$</span> full-stack developer | lagos, ng</p>
       <h1 class="hero-title" data-reveal style="--d:.05s">Eminence<br/><span class="ghost">Adebayo</span></h1>
-      <p class="hero-role" data-reveal style="--d:.1s">builds reliable web apps with <strong>Django</strong>, <strong>Python</strong> &amp; <strong>HTMX</strong></p>
+      <p class="hero-role" data-reveal style="--d:.1s">{{ site_profile.hero_role_text|default:"builds reliable web apps with Django, Python & HTMX"|safe }}</p>
 
       <div class="hero-grid">
         <div class="hero-left" data-reveal style="--d:.18s">
-          <span class="availability"><span class="dot" aria-hidden="true"></span>Available for new projects</span>
+          <span class="availability"><span class="dot" aria-hidden="true"></span>{{ site_profile.availability|default:"Available for new projects" }}</span>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary" data-od-id="hero-cta-primary">Start a project</a>
             <a href="{% static 'pdf/my_resume.pdf' %}" class="btn btn-ghost" data-od-id="hero-cta-resume" target="_blank" rel="noopener">View résumé →</a>
           </div>
-          <p class="hero-note" data-od-id="hero-note">// currently: full-stack web | Django · Python · Docker<br/>// location: Nigeria · UTC+1 · remote friendly</p>
+          <p class="hero-note" data-od-id="hero-note">// currently: full-stack web | Django · Python · Docker<br/>// location: {{ site_profile.location|default:"Nigeria · UTC+1 · remote friendly" }}</p>
         </div>
 
         <div class="terminal" data-reveal style="--d:.28s" data-od-id="hero-terminal" aria-label="Interactive terminal showing developer profile">
@@ -486,12 +486,16 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
             <span class="dotc"></span><span class="dotc"></span><span class="dotc"></span>
             <span class="path">~/about/eminence.jpg</span>
           </div>
+          {% if site_profile.profile_image %}
+          <img src="{{ site_profile.profile_image.url }}" alt="Portrait of Eminence Adebayo"/>
+          {% else %}
           <img src="{% static 'images/IMG-20260806-WA0072.jpg' %}" alt="Portrait of Eminence Adebayo"/>
+          {% endif %}
         </div>
         <div class="about-body" data-reveal style="--d:.2s">
-          <p data-od-id="about-p1"><strong>I&rsquo;m a full-stack developer</strong> who loves solving real problems with code. Using tools like Django, Python and JavaScript, I build efficient, modern web applications with clean design and solid performance.</p>
-          <p data-od-id="about-p2">I focus on delivering real-world solutions that are reliable, easy to use and built to scale, from API backends to Dockerised deployments.</p>
-          <p class="currently" data-od-id="about-currently"><span class="caret">$</span> status&nbsp; <span class="blink-cursor" aria-hidden="true"></span><br/>open to new projects | let&rsquo;s build something worth shipping.</p>
+          <p data-od-id="about-p1"><strong>I&rsquo;m a full-stack developer</strong> {{ site_profile.bio_p1|default:"who loves solving real problems with code. Using tools like Django, Python and JavaScript, I build efficient, modern web applications with clean design and solid performance." }}</p>
+          <p data-od-id="about-p2">{{ site_profile.bio_p2|default:"I focus on delivering real-world solutions that are reliable, easy to use and built to scale, from API backends to Dockerised deployments." }}</p>
+          <p class="currently" data-od-id="about-currently"><span class="caret">$</span> status&nbsp; <span class="blink-cursor" aria-hidden="true"></span><br/>{{ site_profile.status_message|default:"open to new projects | let's build something worth shipping." }}</p>
         </div>
       </div>
     </div>
@@ -509,6 +513,20 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
       </div>
 
       <div class="skills-grid">
+        {% if skills_by_cluster %}
+        {% for cluster, cluster_skills in skills_by_cluster.items %}
+        <div class="cluster" data-reveal style="--d:.05s" data-od-id="skill-cluster-{{ forloop.counter }}">
+          <span class="idx">0{{ forloop.counter }} / {{ cluster|lower }}</span>
+          <h3>{{ cluster }}</h3>
+          <div class="pills">
+            {% for skill in cluster_skills %}
+            <span class="pill">{{ skill.name }} <span class="lvl">{{ skill.level }}</span></span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <!-- Fallback static skills -->
         <div class="cluster" data-reveal style="--d:.05s" data-od-id="skill-cluster-backend">
           <span class="idx">01 / backend</span>
           <h3>Backend</h3>
@@ -547,6 +565,7 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
             <span class="pill">VPS <span class="lvl">Intermediate</span></span>
           </div>
         </div>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -557,6 +576,42 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
       <p class="eyebrow" data-reveal><span class="idx">03</span> projects</p>
       <h2 class="section-title" data-reveal style="--d:.05s">Selected work, shipped.</h2>
 
+      {% if projects %}
+      {% for project in projects %}
+      <div class="project" data-od-id="project-{{ project.pk }}">
+        <div class="shot" data-reveal style="--d:.1s">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="dotc"></span><span class="dotc"></span><span class="dotc"></span>
+              <span class="browser-url">{{ project.browser_url }}</span>
+            </div>
+            {% if project.image %}
+            <img src="{{ project.image.url }}" alt="{{ project.title }} preview"/>
+            {% elif project.image_static_path %}
+            <img src="{% static project.image_static_path %}" alt="{{ project.title }} preview"/>
+            {% else %}
+            <img src="{% static 'images/blog.png' %}" alt="{{ project.title }} preview"/>
+            {% endif %}
+          </div>
+        </div>
+        <div data-reveal style="--d:.2s">
+          <p class="project-meta">{{ project.meta_category }}</p>
+          <h3><a href="{% if project.live_demo_url %}{{ project.live_demo_url }}{% elif project.github_url %}{{ project.github_url }}{% else %}#{% endif %}" target="_blank" rel="noopener" data-od-id="project-{{ project.pk }}-title">{{ project.title }}</a></h3>
+          <p>{{ project.description }}</p>
+          <div class="tags">
+            {% for tag in project.tags_list %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <div class="project-links">
+            {% if project.live_demo_url %}<a class="link" href="{{ project.live_demo_url }}" target="_blank" rel="noopener" data-od-id="project-{{ project.pk }}-demo">Live demo <span class="arrow">→</span></a>{% endif %}
+            {% if project.github_url %}<a class="link" href="{{ project.github_url }}" target="_blank" rel="noopener" data-od-id="project-{{ project.pk }}-github">Source ↗</a>{% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <!-- Fallback static projects -->
       <div class="project" data-od-id="project-blogapi">
         <div class="shot" data-reveal style="--d:.1s">
           <div class="browser">
@@ -688,6 +743,7 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
           </div>
         </div>
       </div>
+      {% endif %}
     </div>
   </section>
 
@@ -701,10 +757,10 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
         <div data-reveal style="--d:.1s">
           <p class="lede" data-od-id="contact-lede">Have a project, a role or just a question? Reach out directly, I reply fast.</p>
           <div class="contact-list" data-od-id="contact-list">
-            <div class="cl-line"><span class="k">email</span><a href="mailto:emmyadeoluwa@gmail.com">emmyadeoluwa@gmail.com</a></div>
-            <div class="cl-line"><span class="k">phone</span><a href="tel:+2349073601282">+234 907 360 1282</a></div>
-            <div class="cl-line"><span class="k">x / tw</span><a href="https://x.com/Emidveloper" target="_blank" rel="noopener">@Emidveloper</a></div>
-            <div class="cl-line"><span class="k">github</span><a href="https://github.com/Eminenz07" target="_blank" rel="noopener">Eminenz07</a></div>
+            <div class="cl-line"><span class="k">email</span><a href="mailto:{{ site_profile.email|default:'emmyadeoluwa@gmail.com' }}">{{ site_profile.email|default:"emmyadeoluwa@gmail.com" }}</a></div>
+            <div class="cl-line"><span class="k">phone</span><a href="tel:{{ site_profile.phone|default:'+2349073601282' }}">{{ site_profile.phone|default:"+234 907 360 1282" }}</a></div>
+            <div class="cl-line"><span class="k">x / tw</span><a href="{{ site_profile.twitter_url|default:'https://x.com/Emidveloper' }}" target="_blank" rel="noopener">@Emidveloper</a></div>
+            <div class="cl-line"><span class="k">github</span><a href="{{ site_profile.github_url|default:'https://github.com/Eminenz07' }}" target="_blank" rel="noopener">Eminenz07</a></div>
           </div>
         </div>
 
@@ -719,7 +775,7 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
             {% endfor %}
           </div>
           {% endif %}
-          <form class="contact-form" method="post" action="{% url 'home' %}" data-od-id="contact-form">
+          <form class="contact-form" method="post" action="{% url 'contact' %}" data-od-id="contact-form">
             {% csrf_token %}
             <div class="field">
               <label for="id_name">Name</label>
@@ -746,9 +802,9 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0;background:rgba(25
   <div class="container footer-inner">
     <p>© 2024 Eminence Adebayo | built with Django &amp; a keyboard.</p>
     <div class="footer-social" data-od-id="footer-social">
-      <a href="https://x.com/Emidveloper" target="_blank" rel="noopener">x / twitter</a>
-      <a href="https://github.com/Eminenz07" target="_blank" rel="noopener">github</a>
-      <a href="mailto:emmyadeoluwa@gmail.com">email</a>
+      <a href="{{ site_profile.twitter_url|default:'https://x.com/Emidveloper' }}" target="_blank" rel="noopener">x / twitter</a>
+      <a href="{{ site_profile.github_url|default:'https://github.com/Eminenz07' }}" target="_blank" rel="noopener">github</a>
+      <a href="mailto:{{ site_profile.email|default:'emmyadeoluwa@gmail.com' }}">email</a>
     </div>
   </div>
 </footer>

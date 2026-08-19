@@ -1,0 +1,51 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block title %}Contact Messages | Admin Dashboard{% endblock %}
+{% block subpath %}messages{% endblock %}
+
+{% block content %}
+<div class="dash-card">
+  <h2 class="dash-card-title">Contact Form Messages</h2>
+  <table class="dash-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>From Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message Content</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for msg in contact_messages %}
+      <tr style="{% if not msg.is_read %}background:rgba(234,179,8,.03){% endif %}">
+        <td>{{ msg.created_at|date:"Y-m-d H:i" }}</td>
+        <td><strong>{{ msg.name }}</strong></td>
+        <td><a href="mailto:{{ msg.email }}" style="color:var(--accent)">{{ msg.email }}</a></td>
+        <td>{{ msg.phone|default:"-" }}</td>
+        <td style="max-width:300px;white-space:pre-wrap">{{ msg.message }}</td>
+        <td>
+          {% if msg.is_read %}
+          <span class="badge">Read</span>
+          {% else %}
+          <span class="badge badge-warn">Unread</span>
+          {% endif %}
+        </td>
+        <td>
+          <a href="{% url 'message_toggle_read' msg.pk %}" class="btn btn-secondary btn-sm" style="margin-right:6px">
+            {% if msg.is_read %}Mark Unread{% else %}Mark Read{% endif %}
+          </a>
+          <a href="{% url 'message_delete' msg.pk %}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7" style="text-align:center;color:var(--meta);padding:24px">No messages received yet.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
