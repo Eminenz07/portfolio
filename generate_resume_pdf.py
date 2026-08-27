@@ -28,9 +28,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #1a1d20;
     background-color: #ffffff;
-    line-height: 1.38;
-    font-size: 11.5px;
-    padding: 20px 26px;
+    line-height: 1.34;
+    font-size: 11.2px;
+    padding: 16px 22px;
     max-width: 210mm;
     margin: 0 auto;
   }
@@ -38,8 +38,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   /* Header */
   .header {
     border-bottom: 2px solid #0f172a;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -48,7 +48,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     flex: 1;
   }
   .name {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 800;
     letter-spacing: -0.025em;
     color: #090d16;
@@ -56,30 +56,30 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     line-height: 1.1;
   }
   .title {
-    font-size: 12.8px;
+    font-size: 12.2px;
     font-weight: 600;
     color: #3b49df;
     letter-spacing: -0.01em;
-    margin-top: 3px;
+    margin-top: 2px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
   .title-tag {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9.8px;
+    font-size: 9.5px;
     background: #eef2ff;
     color: #3730a3;
-    padding: 1px 6px;
+    padding: 1px 5px;
     border-radius: 4px;
     font-weight: 600;
   }
   .contacts {
     text-align: right;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+    font-size: 9.6px;
     color: #475569;
-    line-height: 1.5;
+    line-height: 1.45;
   }
   .contacts a {
     color: #1e293b;
@@ -96,24 +96,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   /* Sections */
   .section {
-    margin-bottom: 9px;
+    margin-bottom: 7.5px;
   }
   .section-title {
-    font-size: 11.2px;
+    font-size: 10.8px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: #0f172a;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     border-bottom: 1px solid #e2e8f0;
     padding-bottom: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   .section-title span.badge-num {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
+    font-size: 8.8px;
     color: #64748b;
     font-weight: 600;
   }
@@ -121,8 +121,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   /* Summary */
   .summary-text {
     color: #334155;
-    font-size: 11px;
-    line-height: 1.44;
+    font-size: 10.8px;
+    line-height: 1.4;
     text-align: justify;
   }
   .summary-text strong {
@@ -134,20 +134,20 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4px 14px;
-    font-size: 11px;
+    gap: 3px 12px;
+    font-size: 10.6px;
   }
   .skill-group {
     display: flex;
     align-items: baseline;
-    gap: 5px;
-    line-height: 1.3;
+    gap: 4px;
+    line-height: 1.28;
   }
   .skill-cat {
     font-weight: 700;
     color: #0f172a;
-    min-width: 104px;
-    font-size: 10.5px;
+    min-width: 98px;
+    font-size: 10.2px;
     letter-spacing: -0.01em;
   }
   .skill-list {
@@ -158,28 +158,31 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     display: inline-block;
     background: #f1f5f9;
     color: #0f172a;
-    padding: 0px 4.5px;
+    padding: 0px 4px;
     border-radius: 3px;
-    font-size: 9.8px;
+    font-size: 9.4px;
     font-family: 'JetBrains Mono', monospace;
-    margin-right: 2.5px;
-    margin-bottom: 1.5px;
+    margin-right: 2px;
+    margin-bottom: 1px;
     border: 1px solid #e2e8f0;
     font-weight: 500;
   }
 
   /* Experience & Projects Items */
-  .item {
+  .exp-item {
+    margin-bottom: 5px;
+  }
+  .exp-item:last-child {
     margin-bottom: 0;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 2px;
+    margin-bottom: 1.5px;
   }
   .item-role {
-    font-size: 12.2px;
+    font-size: 11.8px;
     font-weight: 700;
     color: #0f172a;
   }
@@ -189,7 +192,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   }
   .item-date {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9.8px;
+    font-size: 9.4px;
     color: #64748b;
     font-weight: 600;
   }
@@ -200,18 +203,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   }
   .item-bullets li {
     position: relative;
-    padding-left: 11px;
-    margin-bottom: 2px;
+    padding-left: 10px;
+    margin-bottom: 1.5px;
     color: #334155;
-    font-size: 11px;
-    line-height: 1.34;
+    font-size: 10.6px;
+    line-height: 1.3;
   }
   .item-bullets li::before {
     content: "▹";
     position: absolute;
     left: 0;
     color: #3b49df;
-    font-size: 9.5px;
+    font-size: 9px;
   }
   .item-bullets li strong {
     color: #0f172a;
@@ -222,13 +225,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 12px;
+    gap: 5px 10px;
   }
   .project-card {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 4px;
-    padding: 5px 8px;
+    padding: 4.5px 7px;
   }
   .project-title {
     display: flex;
@@ -237,49 +240,49 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin-bottom: 1px;
   }
   .project-name {
-    font-size: 11.5px;
+    font-size: 11.2px;
     font-weight: 700;
     color: #0f172a;
   }
   .project-links {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9.2px;
+    font-size: 9px;
   }
   .project-links a {
     color: #3b49df;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 5px;
+    margin-left: 4px;
   }
   .project-tech {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 8.8px;
+    font-size: 8.6px;
     color: #64748b;
-    margin-bottom: 2px;
+    margin-bottom: 1.5px;
     font-weight: 500;
   }
   .project-detail {
-    font-size: 10.5px;
+    font-size: 10.2px;
     color: #334155;
-    line-height: 1.28;
+    line-height: 1.25;
   }
 
   /* Bottom Dual Columns (Education, Certs & Awards) */
   .bottom-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 12px;
   }
   .sub-item {
-    margin-bottom: 3px;
+    margin-bottom: 2.5px;
   }
   .sub-title {
-    font-size: 11.2px;
+    font-size: 10.8px;
     font-weight: 700;
     color: #0f172a;
   }
   .sub-sub {
-    font-size: 10.5px;
+    font-size: 10.2px;
     color: #475569;
     display: flex;
     justify-content: space-between;
@@ -293,8 +296,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div class="header-left">
       <h1 class="name">Adebayo Eminence Adeoluwa</h1>
       <div class="title">
-        Full-Stack Software Engineer
-        <span class="title-tag">Python / Django / JavaScript</span>
+        Founder &amp; CEO @ SubHero <span style="color:#cbd5e1;font-weight:400;">|</span> Full-Stack Software Architect
+        <span class="title-tag">Fintech / Python / Cloud</span>
       </div>
     </div>
     <div class="contacts">
@@ -318,13 +321,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <section class="section">
     <div class="section-title"><span class="badge-num">01 //</span> Professional Summary</div>
     <p class="summary-text">
-      <strong>Results-driven Full-Stack Software Engineer</strong> with extensive experience architecting and shipping reliable, scalable web applications, real-time engines, and RESTful APIs. Proficient across the entire software development lifecycle with deep expertise in <strong>Python, Django, Django Channels (WebSockets), JavaScript, HTMX, Docker, and PostgreSQL</strong>. Proven track record of turning complex operational challenges into elegant, production-grade applications with a strong focus on clean system architecture, data security, and seamless user experiences.
+      <strong>Founder &amp; CEO of SubHero</strong> (SubVerse ecosystem) and <strong>Full-Stack Software Engineer</strong> with extensive experience architecting high-throughput fintech platforms, real-time distributed engines, and modular RESTful APIs. Specialized in engineering atomic financial ledgers, automated webhook billing systems, WebSockets, and asynchronous microservices using <strong>Python, Django, PostgreSQL, Redis, Celery, Docker, and HTMX</strong>. Track record of scaling digital products from concept to production with strict emphasis on financial data integrity, security, and low-latency performance.
     </p>
   </section>
 
   <!-- Technical Skills -->
   <section class="section">
-    <div class="section-title"><span class="badge-num">02 //</span> Technical Skills & Stack</div>
+    <div class="section-title"><span class="badge-num">02 //</span> Technical Skills &amp; Architecture</div>
     <div class="skills-container">
       <div class="skill-group">
         <span class="skill-cat">Languages:</span>
@@ -339,7 +342,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </span>
       </div>
       <div class="skill-group">
-        <span class="skill-cat">Backend & Web:</span>
+        <span class="skill-cat">Backend &amp; Web:</span>
         <span class="skill-list">
           <span class="pill">Django</span>
           <span class="pill">Django REST Framework</span>
@@ -350,35 +353,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </span>
       </div>
       <div class="skill-group">
-        <span class="skill-cat">Data & Cache:</span>
+        <span class="skill-cat">Data &amp; Cache:</span>
         <span class="skill-list">
           <span class="pill">PostgreSQL</span>
           <span class="pill">SQLite</span>
           <span class="pill">Redis</span>
-          <span class="pill">ORM Optimization</span>
+          <span class="pill">Celery Workers</span>
+          <span class="pill">Row-Level Locking</span>
         </span>
       </div>
       <div class="skill-group">
-        <span class="skill-cat">DevOps & Cloud:</span>
+        <span class="skill-cat">DevOps &amp; Cloud:</span>
         <span class="skill-list">
           <span class="pill">Docker</span>
           <span class="pill">Google Cloud Run</span>
-          <span class="pill">Render</span>
           <span class="pill">Fly.io</span>
+          <span class="pill">Render</span>
           <span class="pill">Linux / VPS</span>
+          <span class="pill">Nginx</span>
           <span class="pill">Git / GitHub</span>
-          <span class="pill">Nginx / Gunicorn</span>
         </span>
       </div>
       <div class="skill-group" style="grid-column: span 2;">
-        <span class="skill-cat">APIs & Integrations:</span>
+        <span class="skill-cat">Fintech &amp; Security:</span>
         <span class="skill-list">
-          <span class="pill">Paystack Payment Gateway</span>
+          <span class="pill">Double-Entry Wallet Ledger</span>
+          <span class="pill">HMAC Webhook Verification</span>
+          <span class="pill">Virtual Accounts</span>
+          <span class="pill">Paystack API</span>
+          <span class="pill">Argon2 PIN Hashing</span>
           <span class="pill">Tesseract OCR</span>
-          <span class="pill">Poppler PDF Engine</span>
-          <span class="pill">JWT & Session Auth</span>
-          <span class="pill">RESTful API Design</span>
-          <span class="pill">Postman</span>
         </span>
       </div>
     </div>
@@ -386,21 +390,37 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   <!-- Work Experience -->
   <section class="section">
-    <div class="section-title"><span class="badge-num">03 //</span> Work Experience</div>
-    <div class="item">
+    <div class="section-title"><span class="badge-num">03 //</span> Work Experience &amp; Leadership</div>
+    
+    <div class="exp-item">
+      <div class="item-header">
+        <div>
+          <span class="item-role">Founder, CEO &amp; Lead Architect</span>
+          <span style="color:#64748b;margin:0 4px;">•</span>
+          <span class="item-company">SubHero (SubVerse Ecosystem)</span>
+        </div>
+        <span class="item-date">2024 – Present</span>
+      </div>
+      <ul class="item-bullets">
+        <li>Founded and architected <strong>SubHero</strong>, a high-performance Nigerian VTU &amp; digital services fintech platform facilitating automated airtime/data top-ups, utility bill payments, and SMM delivery.</li>
+        <li>Engineered an atomic, double-entry wallet ledger with PostgreSQL row-level locking (<code>SELECT FOR UPDATE</code>), dedicated virtual bank accounts, HMAC webhook verification, and zero-fee P2P transfers.</li>
+        <li>Implemented multi-layer security protocols including Argon2 transaction PIN hashing, Redis anti-brute-force rate limiting, and automated SMS OTP verification via Termii.</li>
+        <li>Directed technical strategy across the SubVerse product suite (SubHero, SubDoc, SubMart), managing Dockerized container pipelines and asynchronous Celery/Redis queue architectures.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
       <div class="item-header">
         <div>
           <span class="item-role">Full Stack Developer</span>
           <span style="color:#64748b;margin:0 4px;">•</span>
           <span class="item-company">Helix Mind Start-Up</span>
         </div>
-        <span class="item-date">2023 – Present</span>
+        <span class="item-date">2023 – 2024</span>
       </div>
       <ul class="item-bullets">
-        <li>Architected and delivered scalable, full-stack web applications and robust backend APIs utilizing <strong>Django, Python, JavaScript, and SQL</strong>.</li>
-        <li>Implemented secure authentication workflows, role-based access control (RBAC), and efficient database models, boosting query speeds and throughput.</li>
-        <li>Engineered interactive front-end interfaces, internal administrative dashboards, and client-facing tools using modern CSS and modular JavaScript.</li>
-        <li>Collaborated with agile engineering teams in high-pressure development sprints, ensuring clean git workflows, continuous testing, and rapid feature deployment.</li>
+        <li>Built and maintained scalable web apps and backend APIs utilizing <strong>Django, Python, JavaScript, and SQL</strong>.</li>
+        <li>Engineered RBAC authentication workflows, internal administrative dashboards, and responsive front-end tools.</li>
       </ul>
     </div>
   </section>
@@ -409,6 +429,20 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <section class="section">
     <div class="section-title"><span class="badge-num">04 //</span> Featured Engineering Projects</div>
     <div class="project-grid">
+
+      <!-- SubHero Platform -->
+      <div class="project-card">
+        <div class="project-title">
+          <span class="project-name">SubHero (Fintech &amp; VTU Engine)</span>
+          <div class="project-links">
+            <a href="https://github.com/Eminenz07" target="_blank">Ecosystem ↗</a>
+          </div>
+        </div>
+        <div class="project-tech">Django · PostgreSQL · Redis · Celery · HTMX · Virtual Accounts</div>
+        <p class="project-detail">
+          Scalable VTU &amp; digital billing portal with automated wallet funding, zero-fee P2P transactions, Argon2 security, and low-latency asynchronous order dispatching.
+        </p>
+      </div>
 
       <!-- The Truth Gate -->
       <div class="project-card">
@@ -421,7 +455,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="project-tech">Django 5 · Channels · Redis · WebSockets · PostgreSQL · Paystack</div>
         <p class="project-detail">
-          Institutional-grade platform with real-time private counselling via WebSocket channels, filtered sermon catalog, community testimonies moderation, and automated Paystack payments.
+          Real-time counselling platform powered by WebSockets, sermon media catalog with advanced filtering, community moderation, and Paystack giving integrations.
         </p>
       </div>
 
@@ -436,7 +470,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="project-tech">Django · Python · Glassmorphic CSS · Vanilla JS · Render</div>
         <p class="project-detail">
-          High-conversion fintech brand portal featuring custom glassmorphism design and a bespoke Django CMS backend powering live mentorship tiers, analytics, and offers.
+          High-conversion fintech portal with custom glassmorphism design and a bespoke Django CMS backend powering mentorship tiers, analytics, and offerings.
         </p>
       </div>
 
@@ -451,14 +485,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="project-tech">Flask · Python · Docker · Tesseract OCR · Google Cloud Run</div>
         <p class="project-detail">
-          Stateless, privacy-centric document conversion engine equipped with Tesseract OCR fallback for scanned PDFs, drag-and-drop UI, and serverless Cloud Run containerization.
+          Stateless, privacy-first document converter with Tesseract OCR fallback for scanned PDFs, drag-and-drop UI, and Cloud Run serverless deployment.
         </p>
       </div>
 
       <!-- AU Voting System -->
       <div class="project-card">
         <div class="project-title">
-          <span class="project-name">AU Voting & Election Platform</span>
+          <span class="project-name">AU Voting &amp; Election Platform</span>
           <div class="project-links">
             <a href="https://au-voting-system-chi.vercel.app/" target="_blank">Live Demo ↗</a>
             <a href="https://github.com/Eminenz07/voting-system2" target="_blank">GitHub ↗</a>
@@ -466,14 +500,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="project-tech">Django · SQLite · Bootstrap 5 · Python · Vercel</div>
         <p class="project-detail">
-          Secure election portal facilitating multi-candidate management, dynamic vote verification, real-time ballot aggregation, and tamper-resistant audit reporting.
+          Multi-candidate election portal with voter authentication, real-time ballot tallying, dynamic polling widgets, and tamper-resistant audit reports.
         </p>
       </div>
 
-      <!-- Django Blog API & CMS -->
+      <!-- Django REST API & Admin CMS -->
       <div class="project-card">
         <div class="project-title">
-          <span class="project-name">Django REST API & Admin CMS</span>
+          <span class="project-name">Django REST API &amp; Admin CMS</span>
           <div class="project-links">
             <a href="https://django-blog-api-292e.onrender.com/" target="_blank">Live Demo ↗</a>
             <a href="https://github.com/Eminenz07/django-blog-api" target="_blank">GitHub ↗</a>
@@ -481,22 +515,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="project-tech">Django REST Framework · HTMX · SQLite · CSS · Render</div>
         <p class="project-detail">
-          Modular RESTful API ecosystem featuring granular permission schemas, Token authentication, CRUD endpoints, and lightweight reactive HTMX frontend interfaces.
-        </p>
-      </div>
-
-      <!-- Virtual Assistant Portfolio -->
-      <div class="project-card">
-        <div class="project-title">
-          <span class="project-name">VA Brand Showcase Platform</span>
-          <div class="project-links">
-            <a href="https://excellenceeniola.fly.dev/" target="_blank">Live Demo ↗</a>
-            <a href="https://github.com/Eminenz07/virtual-assistant-portfolio" target="_blank">GitHub ↗</a>
-          </div>
-        </div>
-        <div class="project-tech">HTML5 · CSS3 · Modern JavaScript · Fly.io</div>
-        <p class="project-detail">
-          Sleek client portfolio website featuring booking integration, interactive service showcases, responsive customer testimonial carousels, and global CDN delivery.
+          Modular RESTful API ecosystem with Token authentication, granular permission scopes, CRUD endpoints, and reactive HTMX admin controls.
         </p>
       </div>
 
@@ -508,14 +527,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div class="bottom-grid">
       <!-- Education & Certifications -->
       <div>
-        <div class="section-title"><span class="badge-num">05 //</span> Education & Certifications</div>
+        <div class="section-title"><span class="badge-num">05 //</span> Education &amp; Certifications</div>
         <div class="sub-item">
           <div class="sub-title">Bachelor of Science (B.Sc.) in Computer Science</div>
-          <div class="sub-sub"><span>Undergraduate Program</span> <span style="font-family:'JetBrains Mono';font-size:9.5px;font-weight:600;">In Progress</span></div>
+          <div class="sub-sub"><span>Undergraduate Program</span> <span style="font-family:'JetBrains Mono';font-size:9.2px;font-weight:600;">In Progress</span></div>
         </div>
-        <div class="sub-item" style="margin-top: 3px;">
-          <div class="sub-title" style="font-size:10.8px;">Certifications & Credentials</div>
-          <div style="font-size:10.5px;color:#334155;line-height:1.35;">
+        <div class="sub-item" style="margin-top: 2px;">
+          <div class="sub-title" style="font-size:10.5px;">Certifications &amp; Credentials</div>
+          <div style="font-size:10.2px;color:#334155;line-height:1.3;">
             • <strong>Full Stack Development</strong> – Udemy<br/>
             • <strong>Web Development Specialist</strong> – Programming Hub
           </div>
@@ -524,16 +543,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
       <!-- Honors & Achievements -->
       <div>
-        <div class="section-title"><span class="badge-num">06 //</span> Honors & Achievements</div>
+        <div class="section-title"><span class="badge-num">06 //</span> Honors &amp; Achievements</div>
         <div class="sub-item">
           <div class="sub-title">4th Place – National Hackathon</div>
-          <div style="font-size:10.5px;color:#334155;line-height:1.32;margin-top:1px;">
+          <div style="font-size:10.2px;color:#334155;line-height:1.28;margin-top:1px;">
             Recognized for innovative problem-solving, rapid prototyping, and delivering clean, production-ready full-stack software.
           </div>
         </div>
-        <div class="sub-item" style="margin-top: 3px;">
-          <div class="sub-title">Rapid Prototyping & Agile Commendation</div>
-          <div style="font-size:10.5px;color:#334155;line-height:1.32;margin-top:1px;">
+        <div class="sub-item" style="margin-top: 2px;">
+          <div class="sub-title">Rapid Prototyping &amp; Agile Commendation</div>
+          <div style="font-size:10.2px;color:#334155;line-height:1.28;margin-top:1px;">
             Commended for agile feature delivery, sprint collaboration, and translating product specifications into functional codebases.
           </div>
         </div>
